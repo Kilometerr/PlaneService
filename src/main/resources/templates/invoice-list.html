@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Invoices</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Net Price</th>
+    </tr>
+    <th:block th:each="invoice: ${invoices}">
+        <tr>
+            <td>
+                <span th:text="${invoice.number}"></span>
+                <span th:text="${invoice.date}"></span>
+                <span th:text="${invoice.netPrice}"></span>
+            </td>
+        </tr>
+    </th:block>
+</table>
+
+</body>
+</html>
